@@ -35,7 +35,6 @@ export default function HomePage() {
 
   return (
     <div className="site-shell">
-      {/* HEADER */}
       <header className="topbar">
         <div className="container topbar-inner">
           <div className="brand-wrap">
@@ -63,14 +62,32 @@ export default function HomePage() {
       </header>
 
       <main>
-        {/* HERO WITH BACKGROUND FIX */}
-        <section
-          className="hero"
-          style={{
-            background: "url('/anchor-bg.jpg') center/cover no-repeat",
-          }}
-        >
-          <div className="container hero-grid">
+        <section className="hero" style={{ position: "relative", overflow: "hidden" }}>
+          <Image
+            src="/anchor-bg.jpg"
+            alt="Anchor Of Faith background"
+            fill
+            priority
+            style={{
+              objectFit: "cover",
+              zIndex: 0,
+            }}
+          />
+
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background:
+                "linear-gradient(135deg, rgba(2, 8, 23, 0.82), rgba(2, 8, 23, 0.62), rgba(3, 18, 45, 0.82))",
+              zIndex: 1,
+            }}
+          />
+
+          <div
+            className="container hero-grid"
+            style={{ position: "relative", zIndex: 2 }}
+          >
             <div>
               <span className="eyebrow">Premium Hot Shot Freight Service</span>
               <h1>Fast, reliable freight service for urgent loads and direct shippers.</h1>
@@ -90,7 +107,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* RIGHT SIDE CARD */}
             <div className="hero-card">
               <h3>Freight Ready</h3>
               <p className="hero-copy">
@@ -110,7 +126,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* SERVICES */}
         <section id="services" className="section section-alt">
           <div className="container">
             <div className="section-heading">
@@ -134,7 +149,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* EQUIPMENT */}
         <section id="equipment" className="section">
           <div className="container two-col">
             <div>
@@ -158,7 +172,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* COVERAGE */}
         <section id="coverage" className="section section-alt">
           <div className="container two-col">
             <div className="section-heading">
@@ -185,10 +198,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* QUOTE */}
         <section id="quote" className="section">
-          <div className="container two-col">
-            <div className="hero-card">
+          <div className="container two-col quote-layout">
+            <div className="hero-card quote-main-card">
               <div className="section-heading">
                 <span className="eyebrow">Get Quote</span>
                 <h2>Request a fast quote for your shipment</h2>
@@ -205,12 +217,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="feature-grid">
-              <div className="feature-card">
+            <div className="quote-side-grid">
+              <div className="feature-card quote-side-card">
                 <h3>Send Rate Confirmation Here</h3>
-                <p>office@anchoroffaithlogistics.com</p>
+                <p className="email-break">office@anchoroffaithlogistics.com</p>
               </div>
-              <div className="feature-card">
+              <div className="feature-card quote-side-card">
                 <h3>Broker Packet</h3>
                 <p>Add your broker packet link here for fast onboarding.</p>
               </div>
@@ -218,7 +230,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* CONTACT */}
         <section id="contact" className="section section-alt">
           <div className="container contact-grid">
             <div className="section-heading">
@@ -249,7 +260,6 @@ export default function HomePage() {
         </section>
       </main>
 
-      {/* FOOTER */}
       <footer className="footer">
         <div className="container footer-inner">
           <div>© Anchor Of Faith Logistics LLC</div>
@@ -258,4 +268,37 @@ export default function HomePage() {
       </footer>
     </div>
   );
+}
+.quote-layout {
+  align-items: stretch;
+}
+
+.quote-main-card {
+  height: 100%;
+}
+
+.quote-side-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.quote-side-card {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.email-break {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+  .quote-side-grid {
+    grid-template-columns: 1fr;
+  }
 }
