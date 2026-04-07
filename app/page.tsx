@@ -24,18 +24,8 @@ export default function HomePage() {
     },
   ];
 
-  const features = [
-    "2024 Ram 3500 Dually",
-    "40 Ft Gooseneck Trailer",
-    "MC# 1759816",
-    "USDOT# 4462007",
-    "Dispatch: 773-717-6248",
-    "Office: 708-428-0248",
-  ];
-
   return (
     <div className="site-shell">
-      {/* HEADER */}
       <header className="topbar">
         <div className="container topbar-inner">
           <div className="brand-wrap">
@@ -62,51 +52,30 @@ export default function HomePage() {
         </div>
       </header>
 
-   <section className="hero">
-  <img
-    src="/anchor-bg.jpg"
-    alt="Anchor background"
-    className="hero-bg-img"
-  />
+      <main>
+        <section className="hero">
+          <img
+            src="/anchor-bg.jpg"
+            alt="Anchor background"
+            className="hero-bg-img"
+          />
 
-  <div className="hero-overlay" />
+          <div className="hero-overlay" />
 
-  <div className="container hero-grid hero-content">
-    <div>
-      <span className="eyebrow">Premium Hot Shot Freight Service</span>
-      <h1>Fast, reliable freight service for urgent loads and direct shippers.</h1>
+          <div className="container hero-grid hero-content">
+            <div>
+              <span className="eyebrow">Premium Hot Shot Freight Service</span>
+              <h1>Fast, reliable freight service for urgent loads and direct shippers.</h1>
 
-      <p className="hero-copy">
-        Anchor Of Faith Logistics LLC provides fast, reliable, and cost-effective
-        hot shot trucking services. We specialize in delivering time-sensitive
-        freight such as construction materials, equipment, and urgent shipments.
-        With experienced drivers, well-maintained trucks, and a commitment to
-        safety and customer satisfaction, we ensure freight is delivered on time,
-        every time.
-      </p>
+              <p className="hero-copy">
+                Anchor Of Faith Logistics LLC provides fast, reliable, and cost-effective
+                hot shot trucking services. We specialize in delivering time-sensitive
+                freight such as construction materials, equipment, and urgent shipments.
+                With experienced drivers, well-maintained trucks, and a commitment to
+                safety and customer satisfaction, we ensure freight is delivered on time,
+                every time.
+              </p>
 
-      <div className="cta-row">
-        <a href="#quote" className="btn btn-primary">Get A Quote</a>
-        <a href="tel:7737176248" className="btn btn-secondary">Call Dispatch</a>
-      </div>
-    </div>
-
-    <div className="hero-card">
-      <h3>Freight Ready</h3>
-      <p className="hero-copy">
-        Built for urgent transportation needs across Midwest lanes with direct,
-        professional service.
-      </p>
-
-      <ul>
-        <li>Construction materials, equipment, and urgent shipments</li>
-        <li>Experienced drivers and maintained equipment</li>
-        <li>Responsive communication from pickup to delivery</li>
-        <li>Hebrews 6:19–20 “We have this as a sure and steadfast anchor of the soul...”</li>
-      </ul>
-    </div>
-  </div>
-</section>
               <div className="cta-row">
                 <a href="#quote" className="btn btn-primary">Get A Quote</a>
                 <a href="tel:7737176248" className="btn btn-secondary">Call Dispatch</a>
@@ -132,7 +101,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* SERVICES */}
         <section id="services" className="section section-alt">
           <div className="container">
             <div className="section-heading">
@@ -156,7 +124,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* QUOTE */}
         <section id="quote" className="section">
           <div className="container two-col quote-layout">
             <div className="hero-card quote-main-card">
@@ -189,7 +156,6 @@ export default function HomePage() {
         </section>
       </main>
 
-      {/* FOOTER */}
       <footer className="footer">
         <div className="container footer-inner">
           <div>© Anchor Of Faith Logistics LLC</div>
