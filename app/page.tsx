@@ -44,6 +44,7 @@ export default function HomePage() {
               width={180}
               height={90}
               className="logo"
+              priority
             />
             <div>
               <div className="brand-name">Anchor Of Faith Logistics LLC</div>
@@ -62,32 +63,19 @@ export default function HomePage() {
       </header>
 
       <main>
-        <section className="hero" style={{ position: "relative", overflow: "hidden" }}>
-          <Image
-            src="/anchor-bg.jpg"
-            alt="Anchor Of Faith background"
-            fill
-            priority
-            style={{
-              objectFit: "cover",
-              zIndex: 0,
-            }}
-          />
+        <section className="hero">
+          <div className="hero-bg">
+            <Image
+              src="/anchor-bg.jpg"
+              alt="Anchor Of Faith background"
+              fill
+              priority
+              className="hero-bg-image"
+            />
+            <div className="hero-overlay" />
+          </div>
 
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(135deg, rgba(2, 8, 23, 0.82), rgba(2, 8, 23, 0.62), rgba(3, 18, 45, 0.82))",
-              zIndex: 1,
-            }}
-          />
-
-          <div
-            className="container hero-grid"
-            style={{ position: "relative", zIndex: 2 }}
-          >
+          <div className="container hero-grid hero-content">
             <div>
               <span className="eyebrow">Premium Hot Shot Freight Service</span>
               <h1>Fast, reliable freight service for urgent loads and direct shippers.</h1>
@@ -268,37 +256,4 @@ export default function HomePage() {
       </footer>
     </div>
   );
-}
-.quote-layout {
-  align-items: stretch;
-}
-
-.quote-main-card {
-  height: 100%;
-}
-
-.quote-side-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
-  align-items: stretch;
-}
-
-.quote-side-card {
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.email-break {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  line-height: 1.7;
-}
-
-@media (max-width: 960px) {
-  .quote-side-grid {
-    grid-template-columns: 1fr;
-  }
 }
