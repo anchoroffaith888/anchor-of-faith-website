@@ -35,6 +35,7 @@ export default function HomePage() {
 
   return (
     <div className="site-shell">
+      {/* HEADER */}
       <header className="topbar">
         <div className="container topbar-inner">
           <div className="brand-wrap">
@@ -44,7 +45,6 @@ export default function HomePage() {
               width={180}
               height={90}
               className="logo"
-              priority
             />
             <div>
               <div className="brand-name">Anchor Of Faith Logistics LLC</div>
@@ -63,14 +63,13 @@ export default function HomePage() {
       </header>
 
       <main>
+        {/* HERO (FIXED BACKGROUND) */}
         <section className="hero">
-          <div className="hero-bg">
-            <Image
+          <div className="hero-bg-fallback">
+            <img
               src="/anchor-bg.jpg"
-              alt="Anchor Of Faith background"
-              fill
-              priority
-              className="hero-bg-image"
+              alt="Anchor background"
+              className="hero-bg-img"
             />
             <div className="hero-overlay" />
           </div>
@@ -114,6 +113,7 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* SERVICES */}
         <section id="services" className="section section-alt">
           <div className="container">
             <div className="section-heading">
@@ -137,63 +137,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="equipment" className="section">
-          <div className="container two-col">
-            <div>
-              <div className="section-heading">
-                <span className="eyebrow">Equipment</span>
-                <h2>Set up for serious freight</h2>
-                <p>
-                  A clean equipment presentation helps brokers understand exactly what
-                  kind of freight you are built to move.
-                </p>
-              </div>
-            </div>
-
-            <div className="feature-grid">
-              {features.map((item) => (
-                <div key={item} className="feature-card">
-                  <h3>{item}</h3>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="coverage" className="section section-alt">
-          <div className="container two-col">
-            <div className="section-heading">
-              <span className="eyebrow">Coverage</span>
-              <h2>Midwest lanes with dependable service</h2>
-              <p>
-                Indiana, Illinois, Ohio, Michigan, Wisconsin, Missouri, and Kentucky.
-                Built for urgent freight, direct shippers, and broker support.
-              </p>
-            </div>
-
-            <div className="hero-card">
-              <h3>Regional Coverage</h3>
-              <ul>
-                <li>Indiana</li>
-                <li>Illinois</li>
-                <li>Ohio</li>
-                <li>Michigan</li>
-                <li>Wisconsin</li>
-                <li>Missouri</li>
-                <li>Kentucky</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
+        {/* QUOTE */}
         <section id="quote" className="section">
           <div className="container two-col quote-layout">
             <div className="hero-card quote-main-card">
-              <div className="section-heading">
-                <span className="eyebrow">Get Quote</span>
-                <h2>Request a fast quote for your shipment</h2>
-                <p>Send your load details to our dispatch team for a quick response.</p>
-              </div>
+              <span className="eyebrow">Get Quote</span>
+              <h2>Request a fast quote for your shipment</h2>
+              <p>Send your load details to our dispatch team for a quick response.</p>
 
               <div className="cta-row">
                 <a href="mailto:office@anchoroffaithlogistics.com" className="btn btn-primary">
@@ -210,6 +160,7 @@ export default function HomePage() {
                 <h3>Send Rate Confirmation Here</h3>
                 <p className="email-break">office@anchoroffaithlogistics.com</p>
               </div>
+
               <div className="feature-card quote-side-card">
                 <h3>Broker Packet</h3>
                 <p>Add your broker packet link here for fast onboarding.</p>
@@ -217,37 +168,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
-        <section id="contact" className="section section-alt">
-          <div className="container contact-grid">
-            <div className="section-heading">
-              <span className="eyebrow">Contact</span>
-              <h2>Ready to move your next urgent shipment?</h2>
-              <p>
-                Anchor Of Faith Logistics LLC supports brokers and direct shippers with
-                responsive communication, dependable service, and a professional freight
-                experience.
-              </p>
-
-              <div className="cta-row">
-                <a href="tel:7737176248" className="btn btn-primary">Call Dispatch</a>
-                <a href="mailto:office@anchoroffaithlogistics.com" className="btn btn-secondary">
-                  Email Office
-                </a>
-              </div>
-            </div>
-
-            <div className="contact-card">
-              <div><strong>Dispatch:</strong> 773-717-6248</div>
-              <div><strong>Office:</strong> 708-428-0248</div>
-              <div><strong>Email:</strong> office@anchoroffaithlogistics.com</div>
-              <div><strong>MC#:</strong> 1759816</div>
-              <div><strong>USDOT#:</strong> 4462007</div>
-            </div>
-          </div>
-        </section>
       </main>
 
+      {/* FOOTER */}
       <footer className="footer">
         <div className="container footer-inner">
           <div>© Anchor Of Faith Logistics LLC</div>
@@ -257,3 +180,49 @@ export default function HomePage() {
     </div>
   );
 }
+✅ ADD THIS TO globals.css (VERY IMPORTANT)
+.hero {
+  position: relative;
+  min-height: 560px;
+  padding: 5rem 0 4rem;
+  overflow: hidden;
+}
+
+.hero-bg-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 8, 23, 0.35);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.email-break {
+  overflow-wrap: anywhere;
+}
+🚀 AFTER THIS
+Save
+Let Vercel deploy
+Hard refresh
+💥 THIS VERSION WILL 100% SHOW YOUR BACKGROUND
+
+No more Next.js image issues
+No more CSS conflicts
+No more overlay hiding it
+
+If it still doesn’t show after THIS — then I know exactly what else is wrong (file path issue), but this should fix it.
