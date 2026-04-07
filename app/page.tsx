@@ -23,6 +23,25 @@ const services = [
   },
 ];
 
+const credentials = [
+  "MC# 1759816",
+  "USDOT# 4462007",
+  "Dispatch: 773-717-6248",
+  "Office: 708-428-0248",
+  "office@anchoroffaithlogistics.com",
+  "Midwest Hot Shot Coverage",
+];
+
+const lanes = [
+  "Indiana",
+  "Illinois",
+  "Ohio",
+  "Michigan",
+  "Wisconsin",
+  "Missouri",
+  "Kentucky",
+];
+
 export default function HomePage() {
   return (
     <div className="site-shell">
@@ -63,7 +82,7 @@ export default function HomePage() {
           <div className="hero-overlay" />
 
           <div className="container hero-grid hero-content">
-            <div>
+            <div className="hero-copy-wrap">
               <span className="eyebrow">Premium Hot Shot Freight Service</span>
               <h1>Fast, reliable freight service for urgent loads and direct shippers.</h1>
 
@@ -80,13 +99,19 @@ export default function HomePage() {
                 <a href="#quote" className="btn btn-primary">Get A Quote</a>
                 <a href="tel:7737176248" className="btn btn-secondary">Call Dispatch</a>
               </div>
+
+              <div className="trust-grid">
+                {credentials.map((item) => (
+                  <div key={item} className="trust-pill">{item}</div>
+                ))}
+              </div>
             </div>
 
             <div className="hero-card">
-              <h3>Freight Ready</h3>
+              <div className="card-kicker">Freight Ready</div>
+              <h3>Built for urgent transportation needs</h3>
               <p className="hero-copy">
-                Built for urgent transportation needs across Midwest lanes with direct,
-                professional service.
+                Direct, responsive service across Midwest lanes with professional communication and dependable execution.
               </p>
 
               <ul>
@@ -122,12 +147,33 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="quote" className="section">
+        <section className="section">
+          <div className="container coverage-wrap">
+            <div className="section-heading">
+              <span className="eyebrow">Coverage</span>
+              <h2>Midwest lane coverage built for direct shippers and brokers</h2>
+              <p>
+                Strong Midwest presence for time-sensitive freight, equipment, materials,
+                and direct service opportunities.
+              </p>
+            </div>
+
+            <div className="lane-grid">
+              {lanes.map((lane) => (
+                <div key={lane} className="lane-pill">{lane}</div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="quote" className="section section-alt">
           <div className="container quote-wrap">
             <div className="quote-main">
               <span className="eyebrow">Get Quote</span>
               <h2>Request a fast quote for your shipment</h2>
-              <p>Send your load details to our dispatch team for a quick response.</p>
+              <p>
+                Send your load details to our dispatch team for a quick response.
+              </p>
 
               <div className="cta-row">
                 <a href="mailto:office@anchoroffaithlogistics.com" className="btn btn-primary">
@@ -141,10 +187,13 @@ export default function HomePage() {
 
             <div className="quote-side-grid">
               <div className="feature-card">
+                <div className="card-kicker">Rate Confirmations</div>
                 <h3>Send Rate Confirmation Here</h3>
                 <p className="email-break">office@anchoroffaithlogistics.com</p>
               </div>
+
               <div className="feature-card">
+                <div className="card-kicker">Broker Packet</div>
                 <h3>Broker Packet</h3>
                 <p>Add your broker packet link here for fast onboarding.</p>
               </div>
