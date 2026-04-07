@@ -35,6 +35,7 @@ export default function HomePage() {
 
   return (
     <div className="site-shell">
+      {/* HEADER */}
       <header className="topbar">
         <div className="container topbar-inner">
           <div className="brand-wrap">
@@ -62,11 +63,18 @@ export default function HomePage() {
       </header>
 
       <main>
-        <section className="hero">
+        {/* HERO WITH BACKGROUND FIX */}
+        <section
+          className="hero"
+          style={{
+            background: "url('/anchor-bg.jpg') center/cover no-repeat",
+          }}
+        >
           <div className="container hero-grid">
             <div>
               <span className="eyebrow">Premium Hot Shot Freight Service</span>
               <h1>Fast, reliable freight service for urgent loads and direct shippers.</h1>
+
               <p className="hero-copy">
                 Anchor Of Faith Logistics LLC provides fast, reliable, and cost-effective
                 hot shot trucking services. We specialize in delivering time-sensitive
@@ -82,12 +90,14 @@ export default function HomePage() {
               </div>
             </div>
 
+            {/* RIGHT SIDE CARD */}
             <div className="hero-card">
               <h3>Freight Ready</h3>
               <p className="hero-copy">
                 Built for urgent transportation needs across Midwest lanes with direct,
                 professional service.
               </p>
+
               <ul>
                 <li>Construction materials, equipment, and urgent shipments</li>
                 <li>Experienced drivers and maintained equipment</li>
@@ -100,6 +110,7 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* SERVICES */}
         <section id="services" className="section section-alt">
           <div className="container">
             <div className="section-heading">
@@ -123,6 +134,7 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* EQUIPMENT */}
         <section id="equipment" className="section">
           <div className="container two-col">
             <div>
@@ -146,6 +158,7 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* COVERAGE */}
         <section id="coverage" className="section section-alt">
           <div className="container two-col">
             <div className="section-heading">
@@ -172,15 +185,14 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* QUOTE */}
         <section id="quote" className="section">
           <div className="container two-col">
             <div className="hero-card">
               <div className="section-heading">
                 <span className="eyebrow">Get Quote</span>
                 <h2>Request a fast quote for your shipment</h2>
-                <p>
-                  Send your load details to our dispatch team for a quick response.
-                </p>
+                <p>Send your load details to our dispatch team for a quick response.</p>
               </div>
 
               <div className="cta-row">
@@ -206,6 +218,7 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* CONTACT */}
         <section id="contact" className="section section-alt">
           <div className="container contact-grid">
             <div className="section-heading">
@@ -236,6 +249,7 @@ export default function HomePage() {
         </section>
       </main>
 
+      {/* FOOTER */}
       <footer className="footer">
         <div className="container footer-inner">
           <div>© Anchor Of Faith Logistics LLC</div>
