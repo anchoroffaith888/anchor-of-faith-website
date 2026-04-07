@@ -62,32 +62,51 @@ export default function HomePage() {
         </div>
       </header>
 
-      <main>
-        {/* HERO (FIXED BACKGROUND) */}
-        <section className="hero">
-          <div className="hero-bg-fallback">
-            <img
-              src="/anchor-bg.jpg"
-              alt="Anchor background"
-              className="hero-bg-img"
-            />
-            <div className="hero-overlay" />
-          </div>
+   <section className="hero">
+  <img
+    src="/anchor-bg.jpg"
+    alt="Anchor background"
+    className="hero-bg-img"
+  />
 
-          <div className="container hero-grid hero-content">
-            <div>
-              <span className="eyebrow">Premium Hot Shot Freight Service</span>
-              <h1>Fast, reliable freight service for urgent loads and direct shippers.</h1>
+  <div className="hero-overlay" />
 
-              <p className="hero-copy">
-                Anchor Of Faith Logistics LLC provides fast, reliable, and cost-effective
-                hot shot trucking services. We specialize in delivering time-sensitive
-                freight such as construction materials, equipment, and urgent shipments.
-                With experienced drivers, well-maintained trucks, and a commitment to
-                safety and customer satisfaction, we ensure freight is delivered on time,
-                every time.
-              </p>
+  <div className="container hero-grid hero-content">
+    <div>
+      <span className="eyebrow">Premium Hot Shot Freight Service</span>
+      <h1>Fast, reliable freight service for urgent loads and direct shippers.</h1>
 
+      <p className="hero-copy">
+        Anchor Of Faith Logistics LLC provides fast, reliable, and cost-effective
+        hot shot trucking services. We specialize in delivering time-sensitive
+        freight such as construction materials, equipment, and urgent shipments.
+        With experienced drivers, well-maintained trucks, and a commitment to
+        safety and customer satisfaction, we ensure freight is delivered on time,
+        every time.
+      </p>
+
+      <div className="cta-row">
+        <a href="#quote" className="btn btn-primary">Get A Quote</a>
+        <a href="tel:7737176248" className="btn btn-secondary">Call Dispatch</a>
+      </div>
+    </div>
+
+    <div className="hero-card">
+      <h3>Freight Ready</h3>
+      <p className="hero-copy">
+        Built for urgent transportation needs across Midwest lanes with direct,
+        professional service.
+      </p>
+
+      <ul>
+        <li>Construction materials, equipment, and urgent shipments</li>
+        <li>Experienced drivers and maintained equipment</li>
+        <li>Responsive communication from pickup to delivery</li>
+        <li>Hebrews 6:19–20 “We have this as a sure and steadfast anchor of the soul...”</li>
+      </ul>
+    </div>
+  </div>
+</section>
               <div className="cta-row">
                 <a href="#quote" className="btn btn-primary">Get A Quote</a>
                 <a href="tel:7737176248" className="btn btn-secondary">Call Dispatch</a>
