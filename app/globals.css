@@ -38,10 +38,12 @@ a {
   margin: 0 auto;
 }
 
+/* ================= NAV ================= */
+
 .topbar {
   border-bottom: 1px solid var(--border);
-  background: rgba(5, 10, 20, 0.72);
-  backdrop-filter: blur(10px);
+  background: rgba(5, 10, 20, 0.75);
+  backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -62,7 +64,6 @@ a {
 }
 
 .logo {
-  height: auto;
   width: 180px;
   border-radius: 12px;
 }
@@ -72,24 +73,23 @@ a {
   font-weight: 700;
 }
 
-.brand-subtitle,
-.section-heading p,
-.hero-copy,
-.feature-card p,
-.service-card p,
-.contact-card,
-.top-contact,
-.section p {
+.brand-subtitle {
   color: var(--muted);
 }
 
 .top-contact {
   text-align: right;
   line-height: 1.7;
+  color: var(--muted);
 }
+
+/* ================= HERO ================= */
 
 .hero {
   padding: 5rem 0 4rem;
+  background:
+    linear-gradient(135deg, rgba(2, 8, 23, 0.88), rgba(2, 8, 23, 0.72)),
+    url("/anchor-bg.jpg") center/cover no-repeat;
 }
 
 .hero-grid,
@@ -118,6 +118,7 @@ h1 {
   line-height: 1.02;
   margin: 1rem 0 0;
   max-width: 12ch;
+  font-weight: 800;
 }
 
 h2 {
@@ -137,7 +138,10 @@ h3 {
 .feature-card p {
   font-size: 1.05rem;
   line-height: 1.7;
+  color: var(--muted);
 }
+
+/* ================= BUTTONS ================= */
 
 .cta-row {
   display: flex;
@@ -153,11 +157,11 @@ h3 {
   padding: 0.95rem 1.4rem;
   border-radius: 18px;
   font-weight: 700;
-  transition: transform 0.18s ease, opacity 0.18s ease, background 0.18s ease;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .btn-primary {
@@ -170,14 +174,24 @@ h3 {
   background: rgba(255, 255, 255, 0.04);
 }
 
+/* ================= CARDS (PREMIUM LOOK) ================= */
+
 .hero-card,
 .service-card,
 .feature-card,
 .contact-card {
   border: 1px solid var(--border);
-  background: var(--card);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
   border-radius: 28px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  transition: all 0.25s ease;
+}
+
+.service-card:hover,
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(216, 166, 43, 0.4);
 }
 
 .hero-card {
@@ -190,6 +204,8 @@ h3 {
   color: var(--muted);
   line-height: 1.9;
 }
+
+/* ================= SECTIONS ================= */
 
 .section {
   padding: 4.5rem 0;
@@ -235,6 +251,8 @@ h3 {
   font-size: 1.05rem;
 }
 
+/* ================= FOOTER ================= */
+
 .footer {
   border-top: 1px solid var(--border);
   padding: 1.2rem 0;
@@ -247,6 +265,8 @@ h3 {
   color: var(--muted);
   font-size: 0.95rem;
 }
+
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 960px) {
   .topbar-inner,
