@@ -1,29 +1,29 @@
 import Image from "next/image";
 
-export default function HomePage() {
-  const services = [
-    {
-      icon: "🚚",
-      title: "Expedited Hot Shot Freight",
-      text: "Direct transportation for urgent, time-sensitive shipments that need fast pickup and dependable delivery.",
-    },
-    {
-      icon: "🏗️",
-      title: "Construction & Equipment",
-      text: "Reliable support for construction materials, equipment, and job-site freight across key Midwest lanes.",
-    },
-    {
-      icon: "🛡️",
-      title: "Professional Carrier Service",
-      text: "Clear communication, safety-first operation, and responsive dispatch from load tender to final delivery.",
-    },
-    {
-      icon: "⚡",
-      title: "Direct Shipper Support",
-      text: "Fast response for brokers and shippers who need a dependable carrier for urgent freight needs.",
-    },
-  ];
+const services = [
+  {
+    icon: "🚚",
+    title: "Expedited Hot Shot Freight",
+    text: "Direct transportation for urgent, time-sensitive shipments that need fast pickup and dependable delivery.",
+  },
+  {
+    icon: "🏗️",
+    title: "Construction & Equipment",
+    text: "Reliable support for construction materials, equipment, and job-site freight across key Midwest lanes.",
+  },
+  {
+    icon: "🛡️",
+    title: "Professional Carrier Service",
+    text: "Clear communication, safety-first operation, and responsive dispatch from load tender to final delivery.",
+  },
+  {
+    icon: "⚡",
+    title: "Direct Shipper Support",
+    text: "Fast response for brokers and shippers who need a dependable carrier for urgent freight needs.",
+  },
+];
 
+export default function HomePage() {
   return (
     <div className="site-shell">
       <header className="topbar">
@@ -35,6 +35,7 @@ export default function HomePage() {
               width={180}
               height={90}
               className="logo"
+              priority
             />
             <div>
               <div className="brand-name">Anchor Of Faith Logistics LLC</div>
@@ -59,7 +60,6 @@ export default function HomePage() {
             alt="Anchor background"
             className="hero-bg-img"
           />
-
           <div className="hero-overlay" />
 
           <div className="container hero-grid hero-content">
@@ -93,9 +93,7 @@ export default function HomePage() {
                 <li>Construction materials, equipment, and urgent shipments</li>
                 <li>Experienced drivers and maintained equipment</li>
                 <li>Responsive communication from pickup to delivery</li>
-                <li>
-                  Hebrews 6:19–20 “We have this as a sure and steadfast anchor of the soul...”
-                </li>
+                <li>Hebrews 6:19–20 “We have this as a sure and steadfast anchor of the soul...”</li>
               </ul>
             </div>
           </div>
@@ -125,8 +123,8 @@ export default function HomePage() {
         </section>
 
         <section id="quote" className="section">
-          <div className="container two-col quote-layout">
-            <div className="hero-card quote-main-card">
+          <div className="container quote-wrap">
+            <div className="quote-main">
               <span className="eyebrow">Get Quote</span>
               <h2>Request a fast quote for your shipment</h2>
               <p>Send your load details to our dispatch team for a quick response.</p>
@@ -142,12 +140,11 @@ export default function HomePage() {
             </div>
 
             <div className="quote-side-grid">
-              <div className="feature-card quote-side-card">
+              <div className="feature-card">
                 <h3>Send Rate Confirmation Here</h3>
                 <p className="email-break">office@anchoroffaithlogistics.com</p>
               </div>
-
-              <div className="feature-card quote-side-card">
+              <div className="feature-card">
                 <h3>Broker Packet</h3>
                 <p>Add your broker packet link here for fast onboarding.</p>
               </div>
