@@ -1,12 +1,15 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import "./globals.css";
 
-export const metadata: Metadata = {
-  title: 'Anchor of Faith Logistics LLC',
-  description: 'Reliable hot shot freight and expedited logistics from Valparaiso, Indiana.',
+export const metadata = {
+  title: "Anchor Of Faith Logistics LLC",
+  description: "Hot Shot Trucking • Expedited Freight • Direct Service",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>{children}</body>
